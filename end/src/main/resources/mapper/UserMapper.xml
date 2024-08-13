@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.test.dao.UserDAO">
+    <select id="getAll" resultType="com.example.test.dataObject.User">
+        select * from user
+    </select>
+
+    <select id="getByName" resultType="com.example.test.dataObject.User">
+        select * from user where name=#{name,jdbcType=VARCHAR}
+    </select>
+
+    <select id="getPageName" resultType="com.example.test.dataObject.User">
+        select * from user where name=#{name,jdbcType=VARCHAR}
+    </select>
+
+    <insert id="add" parameterType="com.example.test.dataObject.User">
+        INSERT INTO user (name, pwd)
+        VALUES(#{name}, #{pwd})
+    </insert>
+
+    <update id="update" parameterType="com.example.test.dataObject.User">
+        UPDATE user
+        <set>
+            <if test="age != null">
+                age=#{age},
+            </if>
+            <if test="gender != null">
+                gender=#{gender},
+            </if>
+            <if test="phone != null">
+                phone=#{phone},
+            </if>
+        </set>
+        where name=#{name}
+    </update>
+
+    <delete id="del">
+        delete from  user
+        where name=#{name}
+    </delete>
+
+</mapper>

@@ -1,0 +1,136 @@
+
+.bgc{
+    background: url(../imgs/light1-3.jpg) no-repeat ;
+    background-size: cover;
+    width:1590px;
+    height:807px;
+}
+body {
+    overflow-y: auto;
+    /*overflow:auto;内容会被修剪,超出设置的宽高后会出现滚动条*/
+    /*overflow:scroll;内容会被修剪,不管内容是否超出,都会出现滚动条的位置*/
+    /*overflow:visible;这个是默认值,内容不会被修剪,会出现在元素框外面。*/
+    /*overflow:hidden;内容被修剪,多余的内容被隐藏*/
+}
+
+.back_box{
+    width: 100px;
+    height: 90px;
+    line-height: 90px;
+    font-size: 20px;
+    padding-left: 50px;
+    font-weight: 1000;
+    color: #f1f5fc;
+}
+.back_box a{
+    text-decoration-line: none;
+}
+
+.box-content{
+    width: 900px;
+    height: 475px;
+    margin-top: 130px;
+    margin-left: 130px;
+}
+
+.box-content p span{
+    color: rgb(255, 255, 255);
+}
+
+.br{
+    float: right;
+    width: 500px;
+    height: 550px;
+    padding-left: 90px;
+    margin-top: -85px;
+    margin-right: -70px;
+    background: rgba(229, 170, 111, 0.36);
+    border-radius: 40px;
+    box-shadow: 10px 10px 30px 2px #030e1dd6;
+}
+.br_header{
+    margin-left: -20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    height: 45px;
+    width: 434px;
+    line-height: 30px;
+    margin-top: 50px;
+    text-align: center;
+}
+.form_input .el-form-item__label {
+    color: #f1f5fc;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.login_form img{
+    width: 20px;
+}
+.login-box {
+    width: 350px;
+    margin: 0px auto;
+    border: 1px solid #dcdfe6;
+    padding: 20px;
+
+  }
+.br input{
+    display: inline-block;
+    color:#a1a1a1;
+    border-radius: 30px;
+    font-size: 17px;
+    width: 75%;
+    height: 50px;
+    border: 1px solid #0082fe;
+    margin-bottom: 10px;
+}
+.login_form{
+
+    margin: 20px 20px 0px 20px;
+
+}
+.wangji a{
+    margin-left: -70px;
+    display: inline-block;
+    width: 400px;
+    color: #0082fe;
+    padding-left: 320px;
+    /* margin-right: 58px; */
+    /* float: right; */
+}
+.btn{
+    text-align: center;
+}
+.btn button{
+    display: inline-block;
+    margin-left: -110px;
+    margin-top: 20px;
+    width: 35%;
+    height: 55px;
+    border-radius: 30px;
+    border: 0;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    font-size: 25px;
+    /* background-image: linear-gradient(to right, #ec7125, #aac222); */
+    background-color: #ec5b18;
+}
+.creat{
+    margin-left: -110px;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 15px;
+    color: #ffffff;
+}
+.creat a{
+    color: #0082fe;
+}
+a{
+    text-decoration: none;
+    color: #000000;
+}
+.back_box :hover{
+    background-color: #f1f5fc;
+    color: #000000;
+}

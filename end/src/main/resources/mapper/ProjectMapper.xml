@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.test.dao.ProjectDAO">
+    <select id="getAll" resultType="com.example.test.dataObject.Project">
+        select * from project
+    </select>
+
+    <select id="getById" resultType="com.example.test.dataObject.Project">
+        select * from project where device_id=#{deviceId,jdbcType=VARCHAR}
+    </select>
+
+    <delete id="del">
+        delete from  project
+        where device_id=#{deviceId}
+    </delete>
+
+    <update id="update" parameterType="com.example.test.dataObject.Project">
+        UPDATE project
+        <set>
+            <if test="manageId != null">
+                manage_id=#{manageId},
+            </if>
+            <if test="message != null">
+                message=#{message},
+            </if>
+        </set>
+        where device_id=#{deviceId}
+    </update>
+
+</mapper>
